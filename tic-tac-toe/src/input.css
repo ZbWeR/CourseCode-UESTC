@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    hsl(0 0% 100%),
+    hsl(0 0% 100%) 12px,
+    hsl(0 0% 90%) 13px,
+    hsl(0 0% 90%) 13px
+  );
+}

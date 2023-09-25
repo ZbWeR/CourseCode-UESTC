@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="./output.css">
+</head>
+<body class="relative flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-stripe">
+  <div class="w-1/2 max-w-xl p-4 text-center rounded-xl">
+    <h1 class="text-3xl ">🏆 井字棋 🎉</h1>
+    <p class="mt-4">快来和 AI 一决高下吧！</p>
+    <div class="flex items-center justify-center mx-auto mt-4">
+      <div id="mapContainer" class="grid grid-cols-3 gap-px -mt-px -ml-px overflow-hidden border rounded-lg w-96">
+        <p id="mapArea0" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">⭕</p>
+        <p id="mapArea1" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">⭕</p>
+        <p id="mapArea2" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">✔️</p>
+        <p id="mapArea3" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">✔️</p>
+        <p id="mapArea4" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">⭕</p>
+        <p id="mapArea5" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">✔️</p>
+        <p id="mapArea6" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">⭕</p>
+        <p id="mapArea7" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">✔️</p>
+        <p id="mapArea8" class="flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100">⭕</p>
+      </div>
+    </div>
+
+    <button id="gameStartBtn" class="px-6 py-2 mt-6 text-white transition-all duration-300 rounded-lg hover:-translate-y-1 bg-gradient-to-r hover:from-sky-500 hover:to-teal-500 from-sky-400 to-teal-400">开始游戏</button>
+  </div>
+  <div id="gameOverMsg" class="absolute items-center justify-center hidden w-screen h-screen bg-black/50">
+    <div class="w-1/4 py-8 mx-auto text-center bg-white rounded-lg">
+      <div id="msgLose" class="flex-col items-center justify-center hidden">
+        <p class=" text-8xl">💩</p>
+        <p class="mt-8 text-2xl ">你输啦</p>
+      </div>
+      <div id="msgDraw" class="flex-col items-center justify-center hidden">
+        <p class=" text-8xl">⚔️</p>
+        <p class="mt-8 text-2xl ">平局</p>
+      </div>
+      <div id="msgWin" class="flex-col items-center justify-center hidden">
+        <p class=" text-8xl">🎉</p>
+        <p class="mt-8 text-2xl ">你赢啦</p>
+      </div>
+      <button id="reStartBtn" class="px-6 py-2 mt-6 text-white transition-all duration-300 rounded-lg bg-gradient-to-r hover:from-sky-500 hover:to-teal-500 from-sky-400 to-teal-400">再来一局</button>
+    </div>
+  </div>
+</body>
+</html>
+
+<script src="./alpha-beta.js" ></script>
+<script src="./game.js" ></script>
