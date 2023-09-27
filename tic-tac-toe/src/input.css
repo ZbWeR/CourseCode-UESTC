@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .game-area {
+    @apply flex items-center justify-center w-32 h-32 -mt-px -ml-px text-6xl transition-all bg-white border cursor-pointer hover:bg-slate-100;
+  }
+}
+
 .bg-stripe {
   background-image: repeating-linear-gradient(
     45deg,
